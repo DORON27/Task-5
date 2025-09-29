@@ -13,6 +13,15 @@ CustomerID int,
 Product varchar(50),
 foreign key (CustomerID) references Customers(CustomerID)
 );
+INSERT INTO Customers 
+VALUES (1, 'Alice', 'Delhi'),
+(2, 'Bob', 'Mumbai'),
+(3, 'Charlie', 'Pune');
+
+INSERT INTO Orders
+VALUES (101, 1, 'Laptop'),
+(102, 2, 'Phone'),
+(103, 4, 'Tablet'); 
 
 -- 1.Inner join
 select Customers.Name,Orders.Product
